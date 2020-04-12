@@ -49,7 +49,7 @@ Replace `CJTypo.Lang.JP` and `.cj-typo:lang(ja)` with what you want. See [API](#
 
     Language codes to include. If a child element's `lang` attribute is set to other language codes, it will be skipped.
 
-    **Defaults**
+    **Default**
 
     | lang | includeLangCodes |
     | ---- | ---------------- |
