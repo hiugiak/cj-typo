@@ -51,8 +51,8 @@ Replace `CJTypo.Lang.JP` and `.cj-typo:lang(ja)` with what you want. See [API](#
 
     **Defaults**
 
-    | lang | includeLangCode |
-    | ---- | --------------- |
+    | lang | includeLangCodes |
+    | ---- | ---------------- |
     | TC   | `zh`, `zh-TW`, `zh-HK` |
     | SC   | `zh`, `zh-CN` |
     | JP   | `jp` |
