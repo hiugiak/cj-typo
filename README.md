@@ -1,3 +1,5 @@
+[简体中文](README.cn.md)
+
 # CJ Typographer
 
 A optimizer for Chinese and Japanese typography on websites
