@@ -35,7 +35,9 @@ var cjTypo = new CJTypo({
 cjTypo.render('.cj-typo');
 ```
 
-Replace `CJTypo.Lang.JP` and `.cj-typo:lang(ja)` with what you want. See [API](#api) section.
+Replace `CJTypo.Lang.JP` and `.cj-typo:lang(ja)` with what you want. See [Options](#options) section.
+
+Check out [sample](sample.html) for a preview.
 
 **Requirement**: space adjustment between consecutive punctuations requires a font supports ["halt" OpenType feature](https://helpx.adobe.com/fonts/using/open-type-syntax.html#halt). Or you can use the fonts in [fonts](fonts) directory.
 
