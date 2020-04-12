@@ -4,7 +4,7 @@ A optimizer for Chinese and Japanese typography on websites
 
 ## Background
 
-Both Chinese and Japanese mainly use full-width characters, including Chinese characters, kana and some full-width punctuations. For aesthetic reasons, consecutive full-width punctuations requires space adjustment. See [Requirements for Japanese Text Layout](https://www.w3.org/TR/jlreq/#positioning_of_consecutive_opening_brackets_closing_brackets_comma_full_stops_and_middle_dots) for Japanese and [Requirements for Chinese Text Layout](https://www.w3.org/TR/clreq/#compression_rules_for_consecutive_punctuation_marks) for Chinese. Besides, extra spacing is necessary between full-width characters (Chinese characters and kana) and positional-width character (Latin letters and digits).
+Both Chinese and Japanese mainly use full-width characters, including Chinese characters, kana and some full-width punctuations. For aesthetic reasons, consecutive full-width punctuations requires space adjustment. See [Requirements for Japanese Text Layout](https://www.w3.org/TR/jlreq/#positioning_of_consecutive_opening_brackets_closing_brackets_comma_full_stops_and_middle_dots) for Japanese and [Requirements for Chinese Text Layout](https://www.w3.org/TR/clreq/#compression_rules_for_consecutive_punctuation_marks) for Chinese. Besides, extra spacing is necessary between full-width characters (Chinese characters and kana) and proportional-width character (Latin letters and digits).
 
 ## Install
 
