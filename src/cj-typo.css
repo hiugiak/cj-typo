@@ -1,0 +1,16 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) 2020 Zhou Xiaojie. All rights reserved.
+ *  Licensed under the MIT License. See LICENSE in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.halfwidth {
+  font-feature-settings: "halt"
+}
+
+.inherit {
+  font-feature-settings: inherit
+}
+
+.eighth-space {
+  letter-spacing: .125em
+}

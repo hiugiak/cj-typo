@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>CJ Typography</title>
+    <link rel="stylesheet" href="dist/cj-typo.css">
+    <style>
+      @font-face {
+        font-family: 'Punctuations SC';
+        src: url(fonts/source-sans-marks-sc/SourceSansMarksSC-Regular.ttf);
+        unicode-range: U+00B7, U+2014, U+2018-2019, U+201C-201D, U+2026, U+3001-3002, U+3008-300B, 
+        U+3010-3011, U+3014-3017, U+FF01, U+FF08-FF09, U+FF0C, U+FF0E, U+FF1A-FF1B, U+FF1F, U+FF3B, 
+        U+FF3D, U+FF5B, U+FF5D, U+FF5E;
+      }
+
+      @font-face {
+        font-family: 'Punctuations TC';
+        src: url(fonts/source-sans-marks-tc/SourceSansMarksTC-Regular.ttf);
+        unicode-range: U+2014, U+2026-2027, U+3001-3002, U+3008-3011, U+3014-3017, U+FF01, U+FF08-FF09, 
+        U+FF0C, U+FF0E, U+FF1A-FF1B, U+FF1F, U+FF3B, U+FF3D, U+FF5B, U+FF5D, U+FF5E;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      [lang]:lang(ja) {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, Roboto, "Hiragino Kaku Gothic Pro", "Yu Gothic", sans-serif;
+      }
+
+      [lang]:lang(zh) {
+        font-family: "Punctuations TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+      }
+
+      [lang]:lang(zh-CN) {
+        font-family: "Punctuations SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+    </style>
+    <script src="dist/cj-typo.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="cj-typo" lang="ja">
+        <h2>日本語</h2>
+        <ol>
+          <li>
+            <p>読点類又は句点類の後ろに終わり括弧類が連続する場合は，読点類又は句点類と終わり括弧類の字間はベタ組とし，終わり括弧類の後ろを原則として二分アキとする。</p>
+            <ul>
+              <li><p>「どちらへ。」<br>「上野まで。」</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>終わり括弧類の後ろに読点類が連続する場合は，終わり括弧類と読点類の字間はベタ組とし，読点類の後ろを原則として二分アキとする。また，終わり括弧類の後ろに句点類が連続する場合は，終わり括弧類と句点類の字間はベタ組とし，行中では句点類の後ろを二分アキとし，行末では句点類の後ろを原則として二分アキとする。</p>
+            <ul>
+              <li><p>はじめの通称は「美猴王」、天界時の自称は「斉天大聖」。</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>読点類の後ろに始め括弧類が連続する場合は，読点類と始め括弧類の字間は，原則として二分アキとする。また，行中で句点類の後ろに始め括弧類が連続する場合は，句点類と始め括弧類の字間は，二分アキとする。ただし，句点類が行末に位置した場合は，句点類の後ろを原則として二分アキにする。</p>
+            <ul>
+              <li><p>また、『西遊記』を映像化・舞台化する場合には……</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>終わり括弧類の後ろに始め括弧類が連続する場合は，終わり括弧類と始め括弧類の字間は，原則として二分アキとする。</p>
+            <ul>
+              <li><p>この類の語には「牛耳る」「テクる」「サボる」などがある。</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>始め括弧類の後ろに始め括弧類が連続する場合は，その字間はベタ組とし，前にくる始め括弧類の前を原則として二分アキとする。</p>
+            <ul>
+              <li>
+                <p>「『なにかめづらしい本はないか……</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>終わり括弧類の後ろに終わり括弧類が連続する場合は，その字間はベタ組とし，後ろにくる終わり括弧類の後ろを原則として二分アキとする。</p>
+            <ul>
+              <li><p>……お早う。』」</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>終わり括弧類の後ろに中点類が連続する場合は，後ろの中点類の前及び後ろを原則として四分アキとする。</p>
+          </li>
+          <li>
+            <p>中点類の後ろに始め括弧類が連続する場合は，前の中点類の後ろを原則として四分アキとする。</p>
+            <ul>
+              <li><p>……「編集」・「校正」</p></li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div class="cj-typo" lang="zh-TW">
+        <h2>繁體中文</h2>
+        <ol>
+          <li>
+            <p>當左括號、左引號、左書名號出現在右括號、右引號、右書名號之後時，縮減其間二分之一個漢字大小的空白。</p>
+            <ul>
+              <li><p>《紅樓夢》（書名）</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>當兩個（或以上）左括號、左引號、左書名號連續排列時，縮減其間二分之一個漢字大小的空白。</p>
+            <ul>
+              <li><p>他說：「『七月流火』是什麼意思？」</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>當兩個（或以上）右括號、右引號、右書名號連續排列時，縮減其間二分之一個漢字大小的空白。</p>
+            <ul>
+              <li><p>《琵琶行（并序）》</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>當句號、逗號、頓號或間隔號出現於右括號、右引號、右書名號之後，或出現於左括號、左引號、左書名號之前時，縮減其間四分之一個漢字大小的空白。</p>
+            <ul>
+              <li><p>中國四大名著：《三國演義》、《西遊記》、《水滸傳》、《紅樓夢》。</p></li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div class="cj-typo" lang="zh-CN">
+        <h2>简体中文</h2>
+        <ol>
+          <li>
+            <p>当右括号、右引号、右书名号出现于点号之后时，缩减二者间二分之一个汉字大小的空白。</p>
+            <ul>
+              <li>子曰：“见贤思齐焉，见不贤而内自省也。”</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>当点号出现在右括号、右引号、后书名之后时，缩减其间二分之一个汉字大小的空白。</p>
+            <ul>
+              <li>《三国演义》，全名为《三国志通俗演义》。</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>当左括号、左引号、左书名号出现在点号之后时，缩减其间二分之一个汉字大小的空白。</p>
+            <ul>
+              <li>我们不但善于破坏一个旧世界，我们还将善于建设一个新世界！（热烈鼓掌）</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>当左括号、左引号、左书名号出现在右括号、右引号、后书名之后时，缩减其间二分之一个汉字大小的空白。</p>
+            <ul>
+              <li>《红楼梦》（书名）</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>当两个（或以上）左括号、左引号、左书名号连续排列时，缩减其间二分之一个汉字大小的空白。</p>
+            <ul>
+              <li>让-雅克·卢梭（“让-雅克”为双名）</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>当两个（或以上）右括号、右引号、后书名连续排列时，缩减其间二分之一个汉字大小的空白。</p>
+            <ul>
+              <li>《琵琶行（并序）》</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>当两个（或以上）问号（或叹号）叠用，或问号和叹号连用时，缩减其间二分之一个汉字大小的空白。</p>
+            <ul>
+              <li>这么点困难就能把我们吓倒吗？！</p></li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </main>
+    <script>
+      (function() {
+        var cjTypo = new CJTypo({
+          lang: CJTypo.Lang.JP
+        })
+        cjTypo.render('.cj-typo:lang(ja)');
+        cjTypo = new CJTypo({
+          lang: CJTypo.Lang.SC,
+          strictMode: false
+        });
+        cjTypo.render('.cj-typo:lang(zh-CN)');
+        cjTypo = new CJTypo({
+          lang: CJTypo.Lang.TC,
+          strictMode: false
+        });
+        cjTypo.render('.cj-typo:lang(zh-TW)');
+      })();
+    </script>
+  </body>
+</html>
