@@ -35,7 +35,7 @@ var cjTypo = new CJTypo({
 cjTypo.render('.cj-typo');
 ```
 
-可将 `CJTypo.Lang.SC` 和 `.cj-typo` 替换为你自己的选项，具体[选项](#options)一节。
+可将 `CJTypo.Lang.SC` 和 `.cj-typo` 替换为你自己的选项，具体查看[选项](#选项)一节。
 
 要预览优化效果，可查看 [sample.html](sample.html) 文件。
 
