@@ -16,7 +16,7 @@ This project uses [node](http://nodejs.org/) and [npm](https://npmjs.com/). Make
 $ git clone https://github.com/hiugiak/cj-typo.git
 $ cd cj-typo
 $ npm install
-$ npm build
+$ npm run build
 ```
 
 Built files can be found under `dist` directory. Copy files under `dist\` to your own project, and include them in HTML head:

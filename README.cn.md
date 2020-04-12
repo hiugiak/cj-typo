@@ -14,7 +14,7 @@
 $ git clone https://github.com/hiugiak/cj-typo.git
 $ cd cj-typo
 $ npm install
-$ npm build
+$ npm run build
 ```
 
 编译后的文件可以在 `dist` 目录下找到。复制 `dist\` 下的文件到你的项目中，然后在 HTML 头部加入加入下面两个文件：
