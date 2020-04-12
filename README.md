@@ -11,7 +11,7 @@ Both Chinese and Japanese mainly use full-width characters, including Chinese ch
 This project uses [node](http://nodejs.org/) and [npm](https://npmjs.com/). Make sure you have had them installed.
 
 ```shell
-$ git clone cj-typo
+$ git clone https://github.com/hiugiak/cj-typo.git
 $ cd cj-typo
 $ npm install
 $ npm build
