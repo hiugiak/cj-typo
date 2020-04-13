@@ -57,7 +57,7 @@ cjTypo.render('.cj-typo');
     | ---- | ---------------- |
     | TC   | `zh`, `zh-TW`, `zh-HK` |
     | SC   | `zh`, `zh-CN` |
-    | JP   | `jp` |
+    | JP   | `ja` |
 
 * strictMode: `boolean`
 

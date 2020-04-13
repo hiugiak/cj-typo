@@ -37,7 +37,7 @@ var cjTypo = new CJTypo({
 cjTypo.render('.cj-typo');
 ```
 
-Replace `CJTypo.Lang.JP` and `.cj-typo:lang(ja)` with what you want. See [Options](#options) section.
+Replace `CJTypo.Lang.JP` and `.cj-typo` with what you want. See [Options](#options) section.
 
 Check out [sample](sample.html) for a preview.
 
@@ -59,7 +59,7 @@ Check out [sample](sample.html) for a preview.
     | ---- | ---------------- |
     | TC   | `zh`, `zh-TW`, `zh-HK` |
     | SC   | `zh`, `zh-CN` |
-    | JP   | `jp` |
+    | JP   | `ja` |
 
 * strictMode: `boolean`
 
