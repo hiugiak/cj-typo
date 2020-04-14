@@ -6,6 +6,8 @@
 
 由于中文和日文都主要使用全角字符，包括汉字、假名和大部分标点符号。为了美观，需要调整连续出现的全角标点之间的间隔，具体规则参阅 [Requirements for Japanese Text Layout](https://www.w3.org/TR/jlreq/#positioning_of_consecutive_opening_brackets_closing_brackets_comma_full_stops_and_middle_dots) 以及[中文排版需求](https://www.w3.org/TR/clreq/#compression_rules_for_consecutive_punctuation_marks)。此外，全角字符（汉字与假名）和半角字符（拉丁字母与阿拉伯数字）之间，还需要增加额外的间隔。
 
+本脚本的实现思路可以查阅文章：[中文网页实现标点挤压](https://blog.hiugiak.com/articles/implement-punctuation-compression-on-chinese-pages/)。
+
 ## 安装
 
 本项目使用了 [node](http://nodejs.org/) 和 [npm](https://npmjs.com/)，使用前请确保已正确安装这两个软件。
