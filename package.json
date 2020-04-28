@@ -1,6 +1,6 @@
 {
   "name": "cj-typo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a optimizer for Chinese and Japanese typography on websites",
   "main": "src/index.js",
   "scripts": {
