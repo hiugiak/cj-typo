@@ -6,7 +6,9 @@
 import { NodeUtils } from "./util";
 
 export interface Options {
-  strictMode?: boolean
+  strictMode?: boolean,
+  compressPunctuations?: boolean,
+  autoSpace?: boolean
 }
 
 export class BaseStyler {
@@ -45,7 +47,9 @@ export class BaseStyler {
     "\\u048a-\\u052f\\u053a-\\u0556\\u0561-\\u0587";
 
   protected options: Options = {
-    strictMode: true
+    strictMode: true,
+    compressPunctuations: true,
+    autoSpace: true
   }
   protected regExp: RegExp;
 
@@ -144,20 +148,31 @@ export class BaseStyler {
       switch (groupIndex) {
         // omit first character
         case 2:
-          if (result.index >= lastPosition) {
-            innerHtmlString += matchedString[0];
-            matchedString = matchedString.substring(1);
-            if (!matchedString) break;
+          if (this.options.compressPunctuations) {
+            if (result.index >= lastPosition) {
+              innerHtmlString += matchedString[0];
+              matchedString = matchedString.substring(1);
+              if (!matchedString) break;
+            }
           }
         // half width
         case 1:
-          var htmlString = `<span class="halfwidth">${matchedString}</span>`;
-          innerHtmlString += htmlString;
+          if (!this.options.compressPunctuations) {
+            innerHtmlString += matchedString;
+          } else {
+            var htmlString = `<span class="halfwidth">${matchedString}</span>`;
+            innerHtmlString += htmlString;
+          }
           break;
-        // kerning between positional-width characters and full-width characters
+        // extra space between positional-width characters and full-width characters
         case 3:
-          var htmlString = `<span class="eighth-space">${matchedString}</span>`;
-          innerHtmlString += htmlString;
+          if (!this.options.autoSpace) {
+            innerHtmlString += matchedString;
+          } else {
+            var htmlString = `<span class="eighth-space">${matchedString}</span>`;
+            innerHtmlString += htmlString;
+          }
+          break;
         default:
           break;
       }
@@ -184,7 +199,7 @@ export class SCStyler extends BaseStyler {
     super(options);
     this.init();
   }
-  
+
   getHalfWidthPatterns(): string[] {
     let patterns = super.getHalfWidthPatterns();
     removeFromArray(patterns, `[${this.closingBrackets}](?=[${this.middleDots}])`);

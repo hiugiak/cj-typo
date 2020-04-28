@@ -45,13 +45,21 @@ Check out [sample](sample.html) for a preview.
 
 ## Options
 
-* lang: `CJTypo.Lang`
+* autoSpace: `boolean`
 
-    **Required**. Which set of rules to be used, `CJTypo.Lang.SC` for simplified Chinese, `CJTypo.Lang.TC` for traditional Chinese and `CJTypo.Lang.JP` for Japanese.
+    Add extra space between full-width character and proportional-width character if `true`.
+
+    **Default**: `true`
+
+* compressPunctuations: `boolean`
+
+    Compress punctuations if `true`.
+
+    **Default**: `true`
 
 * includeLangCodes: `string[]`
 
-    Language codes to include. If a child element's `lang` attribute is set to other language codes, it will be skipped.
+    Language codes to include. If a child element's `lang` attribute is set to other language codes, it will be skipped. The default values depends on the 'lang' option.
 
     **Default**
 
@@ -60,6 +68,10 @@ Check out [sample](sample.html) for a preview.
     | TC   | `zh`, `zh-TW`, `zh-HK` |
     | SC   | `zh`, `zh-CN` |
     | JP   | `ja` |
+
+* lang: `CJTypo.Lang`
+
+    **Required**. Which set of rules to be used, `CJTypo.Lang.SC` for simplified Chinese, `CJTypo.Lang.TC` for traditional Chinese and `CJTypo.Lang.JP` for Japanese.
 
 * strictMode: `boolean`
 

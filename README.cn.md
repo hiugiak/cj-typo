@@ -45,13 +45,21 @@ cjTypo.render('.cj-typo');
 
 ## 选项
 
-* lang: `CJTypo.Lang`
+* autoSpace: `boolean`
 
-    **必需**。选择要应用哪套规则，`CJTypo.Lang.SC` 为简体中文，`CJTypo.Lang.TC` 为繁体中文，`CJTypo.Lang.JP` 为日文。
+    当值为 `true` 时，自动增加中西文之间的间隔。
+
+    **Default**: `true`
+
+* compressPunctuations: `boolean`
+
+    当值为 `true` 时，开启标点挤压。
+
+    **Default**: `true`
 
 * includeLangCodes: `string[]`
 
-    包含的语言代码。若是一个子元素的 `lang` 属性被设置为本选项之外的其他代码，该元素将被跳过。
+    包含的语言代码。若是一个子元素的 `lang` 属性被设置为本选项之外的其他代码，该元素将被跳过。此选项默认值根据 `lang` 选项而定。
 
     **Default**
 
@@ -60,6 +68,10 @@ cjTypo.render('.cj-typo');
     | TC   | `zh`, `zh-TW`, `zh-HK` |
     | SC   | `zh`, `zh-CN` |
     | JP   | `ja` |
+
+* lang: `CJTypo.Lang`
+
+    **必需**。选择要应用哪套规则，`CJTypo.Lang.SC` 为简体中文，`CJTypo.Lang.TC` 为繁体中文，`CJTypo.Lang.JP` 为日文。
 
 * strictMode: `boolean`
 
