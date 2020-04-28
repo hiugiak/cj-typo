@@ -169,7 +169,7 @@ export class BaseStyler {
           if (!this.options.autoSpace) {
             innerHtmlString += matchedString;
           } else {
-            var htmlString = `<span class="eighth-space">${matchedString}</span>`;
+            var htmlString = `<span class="extra-spaced">${matchedString}</span>`;
             innerHtmlString += htmlString;
           }
           break;
