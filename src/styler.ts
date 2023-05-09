@@ -112,7 +112,8 @@ export class BaseStyler {
    */
   applyStyling(node: Node, precedingChar = "", followingChar = ""): void {
     if (node.nodeType != Node.TEXT_NODE) return;
-    let text = node.textContent;
+    var escapeHtml = require('escape-html');
+    let text = escapeHtml(node.textContent);
     if (text.trim().length < 1) return;
 
     // add previousChar and followingChar for better matching
