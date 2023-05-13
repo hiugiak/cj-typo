@@ -45,14 +45,14 @@ export class NodeUtils {
    * be skipped.
    * @returns true if should skip the node
    */
-  static shouldSkip(node: Node, langCodes?: string[]): boolean {
+  static shouldSkip(node: Node, langCodes?: string[], skipSelectors?: string): boolean {
     if (node.nodeType === Node.ELEMENT_NODE) {
-      const skippedTag = ["CODE", "IMG"]
-      let skippable = false;
-      if (langCodes && (<HTMLElement> node).lang) {
-        skippable = !langCodes.includes((<HTMLElement> node).lang);
+      if (langCodes && (node as HTMLElement).lang && !langCodes.includes("*") && !langCodes.includes((node as HTMLElement).lang)) {
+        return true;
       }
-      return skippable || skippedTag.indexOf((<Element>node).tagName) > -1;
+      if (skipSelectors && (node as Element).matches(skipSelectors)) {
+        return true;
+      }
     }
     return false;
   }

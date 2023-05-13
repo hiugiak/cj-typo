@@ -45,21 +45,25 @@ Check out [sample](sample.html) for a preview.
 
 ## Options
 
-* autoSpace: `boolean`
+* `lang: CJTypo.Lang`
+
+    **Required**. Which set of rules to be used, `CJTypo.Lang.SC` for simplified Chinese, `CJTypo.Lang.TC` for traditional Chinese and `CJTypo.Lang.JP` for Japanese.
+
+* `autoSpace: boolean`
 
     Add extra space between full-width character and proportional-width character if `true`.
 
     **Default**: `true`
 
-* compressPunctuations: `boolean`
+* `compressPunctuations: boolean`
 
     Compress punctuations if `true`.
 
     **Default**: `true`
 
-* includeLangCodes: `string[]`
+* `includeLangCodes: string[]`
 
-    Language codes to include. If a child element's `lang` attribute is set to other language codes, it will be skipped. The default values depends on the 'lang' option.
+    Language codes to include. If a child element's `lang` attribute is set to other language codes, it will be skipped. The default values depends on the 'lang' option. Specifying as `*` will skip language check.
 
     **Default**
 
@@ -69,11 +73,13 @@ Check out [sample](sample.html) for a preview.
     | SC   | `zh`, `zh-CN` |
     | JP   | `ja` |
 
-* lang: `CJTypo.Lang`
+* `skipSelectors: string`
 
-    **Required**. Which set of rules to be used, `CJTypo.Lang.SC` for simplified Chinese, `CJTypo.Lang.TC` for traditional Chinese and `CJTypo.Lang.JP` for Japanese.
+    A child element will be skipped if it matches the selectors.
 
-* strictMode: `boolean`
+    **Default**: `code,img`
+
+* `strictMode: boolean`
 
     Match punctuation marks with precise unicodes, especially moddle dot "·" (U+00B7) in simplified Chinese, when strict mode is on. Otherwise, marks matching will be fuzzy, for example, U+00B7, U+2027 and U+30FB are all regarded as middle dot in simplified Chinese.
 
