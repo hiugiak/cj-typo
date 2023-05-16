@@ -16,7 +16,8 @@ enum Lang {
 
 interface Options extends StylerOptions {
   lang: Lang,
-  includeLangCodes?: string[]
+  includeLangCodes?: string[],
+  skipSelectors?: string
 }
 
 /**
@@ -26,6 +27,8 @@ const defaultLangCodes = new Map();
 defaultLangCodes.set(Lang.TC, ["zh", "zh-TW", "zh-HK"]);
 defaultLangCodes.set(Lang.SC, ["zh", "zh-CN"]);
 defaultLangCodes.set(Lang.JP, ["jp"]);
+
+const defaultSkipSelectors = "code,img"
 
 export default class CJTypo {
   static readonly Lang = Lang;
@@ -81,7 +84,12 @@ export default class CJTypo {
     }
 
     let firstChar = node.textContent.length > 0 ? node.textContent[0] : "";
-    if (!NodeUtils.shouldSkip(node, this.options.includeLangCodes || defaultLangCodes.get(this.options.lang))) {
+    if (
+      !NodeUtils.shouldSkip(
+        node,
+        this.options.includeLangCodes || defaultLangCodes.get(this.options.lang),
+        this.options.skipSelectors || defaultSkipSelectors)
+    ) {
       if (node.hasChildNodes()) {
         firstChar = this.traverseAndStyle(node.childNodes[0], precedingChar, followingChar);
       } else {

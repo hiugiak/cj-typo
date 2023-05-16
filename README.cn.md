@@ -45,23 +45,28 @@ cjTypo.render('.cj-typo');
 
 ## 选项
 
-* autoSpace: `boolean`
+* `lang: CJTypo.Lang`
+
+    **必需**。选择要应用哪套规则，`CJTypo.Lang.SC` 为简体中文，`CJTypo.Lang.TC` 为繁体中文，`CJTypo.Lang.JP` 为日文。
+
+
+* `autoSpace: boolean`
 
     当值为 `true` 时，自动增加中西文之间的间隔。
 
-    **Default**: `true`
+    **默认**: `true`
 
-* compressPunctuations: `boolean`
+* `compressPunctuations: boolean`
 
     当值为 `true` 时，开启标点挤压。
 
-    **Default**: `true`
+    **默认**: `true`
 
-* includeLangCodes: `string[]`
+* `includeLangCodes: string[]`
 
-    包含的语言代码。若是一个子元素的 `lang` 属性被设置为本选项之外的其他代码，该元素将被跳过。此选项默认值根据 `lang` 选项而定。
+    包含的语言代码。若是一个子元素的 `lang` 属性被设置为本选项之外的其他代码，该元素将被跳过。此选项默认值根据 `lang` 选项而定。设置为 `*` 将跳过语言检查。
 
-    **Default**
+    **默认**
 
     | lang | includeLangCodes |
     | ---- | ---------------- |
@@ -69,15 +74,17 @@ cjTypo.render('.cj-typo');
     | SC   | `zh`, `zh-CN` |
     | JP   | `ja` |
 
-* lang: `CJTypo.Lang`
+* `skipSelectors: string`
 
-    **必需**。选择要应用哪套规则，`CJTypo.Lang.SC` 为简体中文，`CJTypo.Lang.TC` 为繁体中文，`CJTypo.Lang.JP` 为日文。
+    当子元素与 `skipSelectors` 匹配时，将不会被处理。
 
-* strictMode: `boolean`
+    **默认**: `code,img`
+
+* `strictMode: boolean`
 
     若是本选项打开，将以精确的模式匹配标点符号，比如简体中文里的间隔号“·”只能是 U+00B7。否则，将以模糊的模式匹配标点符号，比如，U+00B7、U+2027 以及 U+30FB 都被认为是简体中文里的间隔号。
 
-    **Default**: `true`
+    **默认**: `true`
 
 ## License
 
