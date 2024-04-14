@@ -50,8 +50,8 @@ export default class CJTypo {
         throw `unsupported language code: ${this.options.lang}`;
     }
   }
-  render(selector: string) {
-    let elems = document.querySelectorAll(selector);
+  render(selector: string | object) {
+    let elems = typeof selector === 'string' ? document.querySelectorAll(selector) : selector;
     Array.from(elems).forEach(e => {
       if (e.childNodes.length > 0)
         this.traverseAndStyle(e.childNodes[0]);
